@@ -3222,6 +3222,8 @@ PRODUCT_PACKAGES += \
     fingerprint.focaltech.default \
     libBSTSWAD \
     libRbsFlow \
+    libaidenoiser \
+    libaidenoiserv2 \
     libarcsoft_low_light_shot \
     libbitmlengine \
     libbitmlenginev2 \
@@ -3247,9 +3249,14 @@ PRODUCT_PACKAGES += \
     libjpege \
     liblowlight_ai_portrait.arcsoft \
     libmctfengine_stub \
+    libmmcamera_bestats \
     libmmcamera_cac3 \
+    libmmcamera_faceproc \
+    libmmcamera_faceproc2 \
+    libmmcamera_lscv35 \
     libmmcamera_mfnr \
     libmmcamera_mfnr_t4 \
+    libmmcamera_pdpc \
     libmot_afd \
     libmotoisdataqueue \
     libmpbase \
@@ -3257,7 +3264,11 @@ PRODUCT_PACKAGES += \
     libofflinelog \
     libopencv \
     libopestriping \
+    libqll10 \
+    libqllengine \
     libremosaic_wrapper \
+    libremosaiclib \
+    librmsclib1 \
     libswregistrationalgo \
     libtfestriping \
     libundistort_impl \

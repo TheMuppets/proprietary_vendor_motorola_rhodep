@@ -3802,6 +3802,69 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libaidenoiser",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libaidenoiser.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libcdsprpc",
+                "libofflinelog",
+                "libsync",
+                "libbitmlengine",
+                "libz",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaidenoiserv2",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libaidenoiserv2.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libcdsprpc",
+                "libofflinelog",
+                "libsync",
+                "libbitmlenginev2",
+                "libopencv",
+                "libz",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libarcsoft_low_light_shot",
     owner: "motorola",
     strip: {
@@ -4711,6 +4774,57 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmmcamera_bestats",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmcamera_bestats.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libofflinelog",
+                "libsync",
+                "android.hardware.graphics.allocator@3.0",
+                "android.hardware.graphics.common@1.1",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@2.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libqdMetaData",
+                "vendor.qti.hardware.display.allocator@3.0",
+                "vendor.qti.hardware.display.mapper@2.0",
+                "vendor.qti.hardware.display.mapper@3.0",
+                "libcamera_metadata",
+                "libutils",
+                "libqti_vndfwk_detect",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "libcdsprpc",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmmcamera_cac3",
     owner: "motorola",
     strip: {
@@ -4751,6 +4865,105 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "libcdsprpc",
                 "libOpenCL",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_faceproc",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmcamera_faceproc.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_faceproc2",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmcamera_faceproc2.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_lscv35",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmcamera_lscv35.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libofflinelog",
+                "libsync",
+                "android.hardware.graphics.allocator@3.0",
+                "android.hardware.graphics.common@1.1",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@2.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libqdMetaData",
+                "vendor.qti.hardware.display.allocator@3.0",
+                "vendor.qti.hardware.display.mapper@2.0",
+                "vendor.qti.hardware.display.mapper@3.0",
+                "libcamera_metadata",
+                "libutils",
+                "libqti_vndfwk_detect",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "libcdsprpc",
                 "libc",
                 "libm",
                 "libdl",
@@ -4808,6 +5021,57 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "libc",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmcamera_pdpc",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmcamera_pdpc.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libofflinelog",
+                "libsync",
+                "android.hardware.graphics.allocator@3.0",
+                "android.hardware.graphics.common@1.1",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@2.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libqdMetaData",
+                "vendor.qti.hardware.display.allocator@3.0",
+                "vendor.qti.hardware.display.mapper@2.0",
+                "vendor.qti.hardware.display.mapper@3.0",
+                "libcamera_metadata",
+                "libutils",
+                "libqti_vndfwk_detect",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "libcdsprpc",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -5023,6 +5287,88 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqll10",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqll10.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libofflinelog",
+                "libsync",
+                "android.hardware.graphics.allocator@3.0",
+                "android.hardware.graphics.common@1.1",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@2.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libqdMetaData",
+                "vendor.qti.hardware.display.allocator@3.0",
+                "vendor.qti.hardware.display.mapper@2.0",
+                "vendor.qti.hardware.display.mapper@3.0",
+                "libcamera_metadata",
+                "libutils",
+                "libqti_vndfwk_detect",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "libcdsprpc",
+                "libbitmlengine",
+                "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqllengine",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqllengine.so",
+            ],
+            shared_libs: [
+                "libqll10",
+                "libcutils",
+                "liblog",
+                "libofflinelog",
+                "libz",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libremosaic_wrapper",
     owner: "motorola",
     strip: {
@@ -5041,6 +5387,55 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libremosaiclib",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libremosaiclib.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "librmsclib1",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "librmsclib1",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/librmsclib1.so",
+            ],
+            shared_libs: [
+                "libm",
+                "libdl",
+                "liblog",
+                "libc",
             ],
         },
     },
